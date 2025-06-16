@@ -12,7 +12,7 @@ iii) then again fill the 3 litre cup and then pour 2 kitre of the 3 litre cup in
 iv) Remaining 1 litre cup is then poured into the 4 litre cup 
 v) and then finally a full 3 litre cup is filled to complete 4 litre 
 
-The Stratergy is to find out how we can get that 1 Litre that help us in these cases follow the same for every case checking out the Precondition
+The Strategy is to find out how we can get that 1 Litre that help us in these cases follow the same for every case checking out the Precondition
 
 
 2) GCD and LCM relation 
