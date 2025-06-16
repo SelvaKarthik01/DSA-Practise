@@ -1,0 +1,29 @@
+Observations :
+
+AND :
+
+AND operations with 1 gives us the last bit of the number 
+
+XOR :
+
+a ^ mask = a complement where mask is all bots are 1 - 1111, 111 etc
+a ^ 0 = a
+a ^ a = 0 
+
+Shifting Operations :
+
+Left Shift:
+a << 1 = 2 * a 
+a << b = a * 2 ^b 
+
+Right Shift:
+
+a >> b = a/2^b 
+Right shift is mainly using to neglect the last number like 1100 => 110 neglect 0 and so on 
+
+Range of Numbers :
+
+-2^n-1 to 2^n-1 -1 where n is the number of bits 
+
+
+
