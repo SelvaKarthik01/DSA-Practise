@@ -13,3 +13,10 @@ or GCD of the min and the target cup to be filled. If the HCF is 1 then you are 
 
 The Stratergy is to find out how we can get that 1 Litre that help us in these cases follow the same for every case checking out the Precondition
 
+
+2) GCD and LCM relation 
+
+for two number a and b 
+a * b = gcd(a,b) * lcm(a,b)
+
+
