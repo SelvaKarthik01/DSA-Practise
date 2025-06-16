@@ -1,15 +1,16 @@
-1) Water can filling
+1) Water can filling Algorithms
+
  => Given Two water Cans oif differet sizes 3 and 5 is it possible to fill a 4 litre water can without any measurements 
 => So for these questions first thing that we need is to find the min and the available water can sizes adn with that min find out the HCF
 or GCD of the min and the target cup to be filled. If the HCF is 1 then you are right to go and it is possible. if tehre is any other HCF it is not possible 
 
 => Steps 3 5 4
 
-1) Fill the 3 lutre cup 
-2) then Pour the 3 litre into the 5 litre Cup 
-3) then again fill the 3 litre cup and then pour 2 kitre of the 3 litre cup into the 5 litre cup to fill it 
-4) Remaining 1 litre cup is then poured into the 4 litre cup 
-5) and then finally a full 3 litre cup is filled to complete 4 litre 
+i) Fill the 3 lutre cup 
+ii) then Pour the 3 litre into the 5 litre Cup 
+iii) then again fill the 3 litre cup and then pour 2 kitre of the 3 litre cup into the 5 litre cup to fill it 
+iv) Remaining 1 litre cup is then poured into the 4 litre cup 
+v) and then finally a full 3 litre cup is filled to complete 4 litre 
 
 The Stratergy is to find out how we can get that 1 Litre that help us in these cases follow the same for every case checking out the Precondition
 
@@ -18,5 +19,7 @@ The Stratergy is to find out how we can get that 1 Litre that help us in these c
 
 for two number a and b 
 a * b = gcd(a,b) * lcm(a,b)
+
+
 
 
