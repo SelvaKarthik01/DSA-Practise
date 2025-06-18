@@ -1,0 +1,22 @@
+Where to use Binary Search ? 
+
+1) if you see that the given input array is a sorted array 99% of teh solution will be on Binary Search 
+2) When you have a Sequence of Numbers most probably we could use Binary Search like Sqrt of a number
+
+For the Ceil and Floor value remember these :
+
+Ceil :
+L[mid] > target condition 
+if element not found throws a index error 
+
+Floor:
+L[mid] < target condition
+if element not foudn gives us the last element len(L) -1 
+
+
+how do you find the element in a sorted array if it of inifinite size ?
+The porblem we have is that we really dont know the end part of a binary search in the array. So in order to find that out we have keep checking
+through chunks of data lets say chunk of 10 elements or so and check is start < target and end < target if yes this is our subarray which has 
+target element and perform binary search. If no, then use next chunk of 10 with start = end + 1 and end = end + 10 and so on until the
+above condition is satisifed !! 
+
