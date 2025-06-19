@@ -6,3 +6,4 @@ def reverse_num(n):
     return (n%10)*(10**int(math.log(n,10))) + reverse_num(n//10)
 n = int(input("Enter the Number : "))
 print(reverse_num(n))
+
