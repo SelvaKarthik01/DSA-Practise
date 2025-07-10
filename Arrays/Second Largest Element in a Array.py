@@ -3,7 +3,8 @@ largest = arr[0]
 slargest = float("-inf")
 for i in range(len(arr)):
     if arr[i] > largest:
-        slargest = largestlargest = arr[i]
+        slargest = largest
+        largest = arr[i]
     if arr[i] < largest and arr[i] > slargest:
         slargest = arr[i]
 print(slargest)
