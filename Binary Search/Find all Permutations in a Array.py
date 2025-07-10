@@ -1,5 +1,5 @@
 L = eval(input("Enter the List : "))
-
+L.sort()
 ans = []
 while(True):
     index = -1 
