@@ -24,6 +24,9 @@ def insertAtPos(root,node_input,pos):
     if pos == 1:
         newnode.next = root
         return newnode
+    if pos > len(L):
+        root = insert(root,node_input)
+        return root
     else:
         curr = root
         k = 2
