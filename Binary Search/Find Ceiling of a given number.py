@@ -1,4 +1,4 @@
-# TO Find the Ceiling a given Traget Number ina  Array using Binary Search 
+# TO Find the Floor of a given Target Number in a  Array using Binary Search 
 
 L = eval(input("Enter the List : "))
 target = int(input("Enter the target element : "))
