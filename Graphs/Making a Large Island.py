@@ -25,7 +25,6 @@ col = int(input("Enter the No. of Columns : "))
 grid  = [[0]*col for _ in range(row)]
 count=0
 n = (row-1)*(col-1) + (col-1) + (row-1)
-print(n)
 Ds = DisJointSet(n)
 for i in range(row):
     for j in range(col):
@@ -66,7 +65,19 @@ for i in range(row):
         for k in ulti_parents:
             temp += Ds.size[k]
         cost = max(cost,temp)
-print("The Largest Island That could be Made is",cost)
+count = 0 
+ans = 0
+for i in range(row):
+    for j in range(col):
+        if grid[i][j] == 0:
+            ans = cost
+        else:
+            count += 1
+if ans == 0:
+    print("The Largest Island That could be Made is",count)
+else:
+    print("The Largest Island That could be Made is",cost)
+    
         
             
                     
