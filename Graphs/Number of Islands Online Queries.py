@@ -20,7 +20,6 @@ class DisJointSet:
         else:
             self.parent[ulp_v] = ulp_u
             self.size[ulp_u] += self.size[ulp_v]
-        
 
 row = int(input("Enter the no. of Rows : "))
 col = int(input("Enter the Number of Columns : "))
@@ -31,7 +30,6 @@ for i in range(row):
         matrix.append(count)
         count += 1
 n = (row-1)*(col-1) + (col-1) + (row-1)
-
 visited=[0]*n
 print(visited)
 Ds = DisJointSet(n)
