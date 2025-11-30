@@ -10,6 +10,6 @@ def binary_search(L):
             end = mid
         else:
             start = mid + 1
-    return start
+    return L[end]
 L = eval(input("Enter the List : "))
 print(binary_search(L))
