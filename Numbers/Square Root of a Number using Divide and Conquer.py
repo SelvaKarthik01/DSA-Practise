@@ -14,8 +14,8 @@ while(s <= end):
     if (mid * mid < n):
         s = mid + 1
 else:
-    root = mid -1
+    root = end
     # Newton Raphsons Formula for Finding the Precise Square Root
     print((root+n/root)/2)
-    # This root value is jutrs va repcise estimate of the value
+    # This root value is just va repcise estimate of the value
     

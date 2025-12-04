@@ -1,0 +1,8 @@
+<Striver>
+
+Patterns Notes :
+
+1) in the Outer Loop count the No. of Lines
+2) in the Inner loop, focus on the column sand connect them somehow to teh rows 
+3) Print them "*" inside the inner loop
+4) Observe symmetry [optional only applicatable for some problems]
