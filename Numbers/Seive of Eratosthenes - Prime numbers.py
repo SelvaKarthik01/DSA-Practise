@@ -4,7 +4,7 @@
 import math
 n = int(input("Enter the Number : "))
 import numpy as np
-L = np.zeros(41)
+L = np.zeros(n+1)
 ans = []
 def factors(a,n,L):
     i = 2
