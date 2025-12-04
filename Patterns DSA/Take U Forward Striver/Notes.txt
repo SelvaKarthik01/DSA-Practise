@@ -6,3 +6,6 @@ Patterns Notes :
 2) in the Inner loop, focus on the column sand connect them somehow to teh rows 
 3) Print them "*" inside the inner loop
 4) Observe symmetry [optional only applicatable for some problems]
+
+
+Problems : https://github.com/kunal-kushwaha/DSA-Bootcamp-Java/blob/main/assignments/09-patterns.md
