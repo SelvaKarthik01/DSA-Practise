@@ -6,6 +6,8 @@ Docstring for Sorting Algorithms.Selection Sort
 3) do it until we reach the last element 
 
 Time Complexity : O(n^2)
+Best Case: O(n^2)
+Worst Case: O(n^2)
 Space Complexity : O(1)
 """
 

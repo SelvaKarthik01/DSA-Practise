@@ -8,6 +8,9 @@ Key is on every iteration the max eleement is added to the Last
 3) We can optimise this when no swaps have been found we can include a didswap flag variables and stop furthur iterations
 
 Time Complexity: O(n^2)
+Best Case : O(n^2)
+Worst Case : O(n^2)
+Best case with optimization: O(1)
 Space Complexity : O(1) 
 """
 

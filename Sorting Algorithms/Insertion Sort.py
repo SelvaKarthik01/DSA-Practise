@@ -11,6 +11,8 @@ Pick a element in the ith window box and put the element in the correct possitio
 6) Do the Same rprocess for i times 
 
 Time Complexity : O(n^2)
+Best Case : O(n)
+Worst Case : O(n)
 Space Complexity : O(1)
 
 """
