@@ -1,5 +1,4 @@
 n = int(input("Enter the Number : "))
-i = int(input("Enter the ith Position : "))
-mask = 1 << (i-1)
-n = n | mask
+i = int(input("Enter the Value for i : "))
+n = n | (1<<i)
 print(n)

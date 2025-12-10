@@ -4,10 +4,9 @@
 # 4 - 100
 # 8 - 1000
 n = int(input("Enter the number: "))
-temp = n & -n
-temp = n ^ temp # or temp = n - temp
-if temp == 0 :
-    print("It is a Power of 2 ")
+
+if n & (n-1):
+    print("It is not a Power of 2 ")
 else:
-    print("Not a Power of 2")
+    print("It is a Power of 2")
 
