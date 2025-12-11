@@ -1,34 +1,54 @@
-L =eval(input("Enter the List : "))
-k = int(input("Enter the Sum : "))
+"""
+Docstring for Arrays.Length of the Longest Subarray of Sum k
 
+Another Approach is generate all the possible subarray and check each subarray if its sum == k 
+TC -> O(n^2) -> for generating subarrays 
+      k*O(n) -> for finding the sum of each subarray if we have k subarray
+      Total -> O(n^2) + O(n^2) -> O(2n^2) -> O(n^2)
+SC -> O(n^2) for storing all possible subarrays 
+
+Time Complexity : O(n)
+Space Complexity : O(1)
+
+"""
+
+# Prefix Sum Algorithm applicable for +ve, -ve and 0 as elements in the array 
+L = eval(input("Enter the List : "))
+k = int(input("Enter the target Sum : "))
 d = {}
-sum = 0 
-len1 = 0 
+max_len = -1
+sum = 0
 for i in range(len(L)):
-    if L[i] != 0 and L[i] > 0:
-        sum += L[i]
-        rem = sum - k
-        if rem in d:
-            len1 = max(len1,i-d[rem])
-        d[sum] = i
-print(len1)
-# Another Greedy Approach Solution 
+    sum += L[i]
+    if sum == k :  # Present at the starting itself 
+        max_len = max(max_len,i+1) 
+    if (sum -k) in d:   # Prefix-Sum 
+        max_len = max(max_len,i-d[sum-k]) 
+    if sum not in d:
+        d[sum] = i 
+print(max_len)
 
-"""i = 0 
-j = 1
-len1 = 0
-sum =L[i]
-while(j < len(L)):
-    sum += L[j]
-    if sum < k:
-        j += 1
-    elif sum == k :
-        len1 = max(len1,j-i+1)
-        j += 1
-    elif sum > k :
-        sum -= L[i]
+
+# Greedy Algorithm only applicable for +ve and 0 as elements in List 
+# Comparitively lesser Time Complexity with lesser whole loops running 
+# Time Complexity : O(n)
+# Space Compleixty : O(1)
+max_len = -1
+i = 0
+j = 0
+curr = 0
+
+while j < len(L):
+    curr += L[j]
+
+    while curr > k and i <= j:
+        curr -= L[i]
         i += 1
-        j += 1
-print(len1)"""
-        
-        
+
+    if curr == k:
+        max_len = max(max_len, j - i + 1)
+
+    j += 1
+
+print(max_len)
+    
