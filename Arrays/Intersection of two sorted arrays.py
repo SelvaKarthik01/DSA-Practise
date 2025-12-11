@@ -1,5 +1,10 @@
 """
-Docstring for Arrays.INtersection of two sorted arrays
+Docstring for Arrays.Intersection of two sorted arrays
+
+Another Approach is to use a visited array in one of the arrays and check if we have check it or not until the first array reaches the end 
+TC -> O(n)
+SC -> O(n) for the visited array set 
+
 
 Time Complexity : O(n)
 Space Complexity : O(1) -> Auxiliary Space O(n) for storing the ans array 
