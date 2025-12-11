@@ -6,7 +6,7 @@ TC -> O(n)
 SC -> O(n) for the visited array set 
 
 
-Time Complexity : O(n)
+Time Complexity : O(n1+n2) (Worst case) -> O(n)
 Space Complexity : O(1) -> Auxiliary Space O(n) for storing the ans array 
 
 """
