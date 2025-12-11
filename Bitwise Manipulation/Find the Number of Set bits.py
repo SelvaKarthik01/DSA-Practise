@@ -1,6 +1,7 @@
 # To find the Number of 1s in a binary number for a Number n
 n = int(input("Enter the Number : "))
 n1 = n
+n2 = n
 count = 0 
 while(n != 0):
     rmb = n & -n
@@ -16,4 +17,12 @@ while(n != 0 ):
         count += 1
     n >>= 1 
 print(count)
+
+n = n2 
+count = 0 
+while(n != 0):
+    n = n & (n-1)
+    count += 1
+print(count)
+
     
