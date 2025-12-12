@@ -14,16 +14,16 @@ Time Complexity : O(n) -> Just running tbhrough the end of loop once
 Space Complexity : O(1) -> No extra space just two pointer variables 
 
 """
-L = eval(input("Enter the Array : "))
-non_zero=0
-zero = 0 
-while(non_zero != len(L)):
-    while(zero < len(L) and L[zero]!=0):
-        zero += 1
-    non_zero = zero + 1
-    while(non_zero < len(L) and L[non_zero]==0):
-        non_zero += 1
-    if non_zero < len(L) and zero <len(L):
-        L[zero],L[non_zero]=L[non_zero],L[zero]
-print(L)
-    
+L = eval(input("Enter the List : "))
+left = 0 
+right = len(L)-1
+while(left < len(L) and right >= 0 and left < right):
+    if L[left] == 1:
+        left += 1
+    elif L[right] == 0:
+        right -= 1 
+    else:
+        L[left],L[right]=L[right],L[left]
+        left += 1
+        right -= 1  
+print(L) 
