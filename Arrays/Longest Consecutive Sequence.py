@@ -38,7 +38,7 @@ for i in s:
     if i-1 not in s: # This i is going to be our starting point [The opposite finding the end poitn is also possible]
         count = 1
         while(True):
-            if i+1 in s: # Till we reachh the end point 
+            if i+1 in s: # Till we reach the end point 
                 count += 1
                 i += 1
             else:
