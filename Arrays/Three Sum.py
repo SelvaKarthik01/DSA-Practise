@@ -37,10 +37,10 @@ while(i < len(L)):
             if L[i] + L[j] + L[k] == target:
                 ans.append([L[i],L[j],L[k]])
                 temp = L[j]
-                while(j < len(L) and L[j] == temp):
+                while(j < k and L[j] == temp):
                     j += 1
                 temp = L[k]
-                while(k >= 0 and L[k] == temp):
+                while(j < k and L[k] == temp):
                     k -= 1
     temp = L[i]
     while(i < len(L) and L[i]==temp):
