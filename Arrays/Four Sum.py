@@ -9,7 +9,7 @@ Another Approach using Hashmap very similar to the three Sum and Prefix
 TC-> O(n^3)
 SC->O(1)
 
-Time Complexity : O(n^3) -> keeping i ans constant, keeping j as constant, and moving k and l as pointers 
+Time Complexity : O(n^3) -> keeping i ans constant, keeping j as constant, and moving k and l as pointers  + O(nlogn) for sorting
 Space Complexity : O(1) -> Auxiliary Space O(n) fro storing the quadruples
 """
 L = eval(input("Enter the List : "))
