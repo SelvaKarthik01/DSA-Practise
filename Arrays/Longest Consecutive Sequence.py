@@ -25,7 +25,8 @@ TC -> O(nlogn)-> for sorting + O(n) -> for linear traversal -> O(nlogn)
 SC -> O(1) -> just three varibles 
 
 The Hack is to find the either the starting point or the ending poitn of the sequence thast why we use a hashmap
-Time Complexity: O(n)
+Time Complexity: O(n) -> for storing it in set + O(n) for finding every starting point + O(n) till we find the end point 
+                      Total -> O(3n) -> O(n)
 Space Complexity : O(n) -> for the hashmap 
 
 """
