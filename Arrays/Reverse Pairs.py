@@ -20,11 +20,10 @@ def Merge(L,low,mid,high):
     j = mid+1
     temp = []
     count = 0 
-    while(i<=mid and j <=high):
+    for i in range(low,mid+1):
         while(j <= high and L[i] > 2*L[j]):
             j += 1
-        count += j - (mid+1)
-        i += 1
+        count += (j -(mid+1))
     i = low 
     j = mid + 1
     while(i<=mid and j <= high):
