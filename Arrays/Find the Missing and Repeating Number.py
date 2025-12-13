@@ -18,8 +18,9 @@ simialrly do it for squarres we get x^2-y^2 = (x+y)*(x-y) use x-y in the quation
 TC -> O(n) for finding the Sum and Square Sum 
 Sc -> O(1)
 
-Time Complexity :
-Space Complexity : 
+Time Complexity : O(n) for finding the xor of the Elements in Array + O(n) for finding the Elements to categories + O(n) for 1 to n categories
+                  Total -> O(n) + O(n) + O(n) -> O(3n)-> O(n)
+Space Complexity : O(1) just xor variables 
 
 """
 n = int(input("Enter the Number N : "))
