@@ -10,15 +10,17 @@ Leaders in an array are those that whose elements in the right are smaller
 Leaders -> [22,12,6]
 
 Time Complexity : O(n) -> Iterating from teh last till the first 
-Space Compleixty : O(1) -> Auxiliary Space for storing the leaders O(n)
+Space Compleixty : O(1) Auxiliary Space for returning the ans 
 
 """
 
 L = eval(input("Enter the List : "))
 leaders = [L[-1]]
+latest_leader = L[-1]
 for i in range(len(L)-2,-1,-1):
-    if L[i] > leaders[-1]:
+    if L[i] > latest_leader:
         leaders.append(L[i])
+        latest_leader = L[i]
 
 print(leaders)
     
