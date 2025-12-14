@@ -1,7 +1,5 @@
 """
-Docstring for Binary Search.Find Floor of a given number
-
-Floor -> The Largest Number <= Target 
+Docstring for Binary Search.Upper Bound of a Number
 
 Time Complexity : O(logn)
 Space Complexity : O(1)
@@ -11,15 +9,16 @@ Space Complexity : O(1)
 def Binary_Search(L,target):
     low = 0 
     high = len(L)-1
-    ans = -1
+    ans = len(L)
     while(low <= high):
         mid = low + (high-low)//2
-        if L[mid] <= target:
+        if L[mid] > target:
             ans = mid 
-            low = mid + 1
+            high = mid -1 
         else:
-            high = mid - 1
-    return L[ans]
+            low = mid + 1
+    return ans 
+
 L = eval(input("Enter the List : "))
 target = int(input("Enter the Target Element : "))
-print(Binary_Search(L,target))
+print(L[Binary_Search(L,target)])

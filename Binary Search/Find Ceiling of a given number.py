@@ -1,16 +1,25 @@
-# TO Find the Floor of a given Target Number in a  Array using Binary Search 
+"""
+Docstring for Binary Search.Find Ceiling of a given number
 
-L = eval(input("Enter the List : "))
-target = int(input("Enter the target element : "))
-def binary_search(L,n):
-    start = 0 
-    end = len(L)-1
-    while(start <= end):
-        mid = start + (end-start)//2
-        if L[mid] > target:
-            end = mid - 1
-        else :
-            start = mid + 1
-    return L[start]
-print(binary_search(L,target))
+This is exact problem as finding the lower bound 
+Ceil -> The Smallest Number that is >= Target 
+
+Time Compleixty : O(logn)
+Space Complexity : O(1)
+"""
+def Binary_Search(L,target):
+    ans = -1 
+    low = 0 
+    high = len(L)-1
+    while(low <= high):
+        mid = low + (high-low)//2
+        if L[mid] >= target:
+            ans = mid 
+            high = mid - 1
+        else:
+            low = mid + 1
+    return L[ans]
             
+L = eval(input("Enter the List : "))
+target = int(input("Enter the target Element : "))
+print(Binary_Search(L,target))
