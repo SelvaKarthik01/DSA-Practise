@@ -1,7 +1,7 @@
 """
 Docstring for Arrays.Maximum Product Subarray
 
-Another Approach is to generate all the subarrays anf ind the rpoducts and cehck if its max
+Another Approach is to generate all the subarrays and multipliy the products and check if its max
 TC-> O(n^2)
 SC -> O(1)
 
