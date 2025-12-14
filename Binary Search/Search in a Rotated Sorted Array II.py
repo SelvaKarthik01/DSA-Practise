@@ -1,7 +1,7 @@
 """
 Docstring for Binary Search.Search in a Rotated Sorted Array II
 
-Time Complexity : O(logn)
+Time Complexity : O(logn) + O(n/2) for worst case if there are so many duplicates ion the start and end and mid
 Space Compleixty : O(1)
 
 """
