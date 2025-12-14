@@ -7,7 +7,7 @@ Space Complexity : O(1)
 def Binary_Search(L,target,low,high):
     if low > high:
         return -1
-    mid = (low+high)//2
+    mid = (low+high)//2       # Alternative for avoiding Overflow cases mid = low + (high-low)//2
     if L[mid] == target:
         return mid 
     elif L[mid] > target:

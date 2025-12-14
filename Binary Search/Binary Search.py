@@ -11,7 +11,7 @@ def Binary_Search(L,target):
     low = 0 
     high = len(L)-1
     while(low <= high):
-        mid = (low+high)//2
+        mid = low + (high-low)//2
         if L[mid] > target:
             high = mid -1
         elif L[mid] < target:
