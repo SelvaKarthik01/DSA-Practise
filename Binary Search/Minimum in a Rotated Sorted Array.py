@@ -4,6 +4,7 @@ Docstring for Binary Search.Minimum in a Rotated Sorted Array
 Time Complexity : O(logn)
 Space Compleixty : O(1)
 
+One Edge Case failing if we check left part as sorted or not [7,8,9,1,2,3,4,5,6]
 """
 
 def Binary_Search(L):
