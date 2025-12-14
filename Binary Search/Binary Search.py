@@ -1,19 +1,22 @@
-# Binary serach algorithm O(log n)
+"""
+Docstring for Binary Search.Binary Search
+
+Time Complexity : O(logn) for every elemnent we are dividing teh search space by 2 so log base 2 n 
+Space Complexity : O(1) 
+
+"""
 L = eval(input("Enter the List : "))
-L.sort()
-n = int(input("Enter the Number to be Searched : "))
-def binary_search(L,n):
-    start = 0 
-    end = len(L)-1
-    while(start <= end):
-        mid = (start + (end))//2
-        if L[mid] == n:
-            return mid
-            break
-        if L[mid] > n :
-            end = mid -1
-        if L[mid] < n :
-            start = mid + 1
-    else:
-        return -1
-print(binary_search(L,n))
+target = int(input("Enter the Target Element : "))
+def Binary_Search(L,target):
+    low = 0 
+    high = len(L)-1
+    while(low <= high):
+        mid = (low+high)//2
+        if L[mid] > target:
+            high = mid -1
+        elif L[mid] < target:
+            low = mid + 1
+        elif L[mid] == target :
+            return mid 
+    return -1 
+print(Binary_Search(L,target))
