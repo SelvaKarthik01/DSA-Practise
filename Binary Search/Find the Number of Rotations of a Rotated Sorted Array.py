@@ -6,25 +6,24 @@ Space Complexity : O(1)
 
 """
 def Binary_Search(L):
-    low = 0
-    high = len(L) - 1
-
-    while low <= high:
-        # already sorted → smallest is at low
-        if L[low] <= L[high]:
-            return low
-
-        mid = low + (high - low) // 2
-
-        # mid is the minimum
-        if mid > 0 and L[mid] < L[mid - 1]:
-            return mid
-
-        # decide direction using HIGH, not LOW
-        if L[mid] > L[high]:
+    result = -1
+    ans = float("inf")
+    low = 0 
+    high = len(L)-1
+    while(low <= high):
+        mid = low + (high-low)//2
+        if L[low] <= L[mid]:
+            if L[low] < ans:
+                ans = L[low]
+                result = low
             low = mid + 1
         else:
-            high = mid - 1
+            if ans > L[mid]:
+                ans = L[mid]
+                result = mid 
+            high = mid -1
+    print(ans)
+    return result
      
 
 L = eval(input("Enter the List : "))
