@@ -1,5 +1,8 @@
 """
 Docstring for Binary Search.Least Capacity to ship packages within D days
+
+Time Complexity : O(nlogn)
+Space Complexity : O(1)
 """
 
 def Binary_Search(weights,days):
