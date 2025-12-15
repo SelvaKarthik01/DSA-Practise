@@ -1,7 +1,7 @@
 """
 Docstring for Binary Search.Minimum Number of Days to make M bouquets\
 
-Time Complexity : O(n) + O(logn)
+Time Complexity : O(n)*O(logn) -> O(nlogn)
 Space Complexity : O(1)
 
 """
