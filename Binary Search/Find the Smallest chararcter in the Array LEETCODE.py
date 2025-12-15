@@ -39,18 +39,29 @@ target is a lowercase English letter.
     
     
     
+Time Complexity : O(logn)
+Space Complexity : O(1)  
     
+"""
     
-    """
-    
-class Solution(object):
-    def nextGreatestLetter(self, L, target):
-        start = 0 
-        end = len(L)-1
-        while(start != end+1):
-            mid = start + (end-start)//2
-            if L[mid] > target:
-                end = mid - 1
-            if L[mid] <= target:
-                start = mid + 1
-        return L[start % len(L)]
+def Binary_Search(L,target):
+    low = 0 
+    high = len(L)-1
+    ans = -1
+    while(low<= high):
+        mid = low + (high-low)//2
+        if L[mid] < target:
+            low = mid + 1
+        elif L[mid] > target:
+            ans = L[mid]
+            high = mid -1
+        else:
+            low = mid + 1
+    if ans == -1:
+        return L[0]
+    else:
+        return ans
+        
+L = eval(input("Enter the List : "))
+target = input("Enter the Target : ")
+print(Binary_Search(L,target))
