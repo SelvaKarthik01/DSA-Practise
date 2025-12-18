@@ -23,7 +23,6 @@ def Binary_Search(matrix):
         row = MaxElement(matrix,mid)
         if mid-1 >= 0:
             left = matrix[row][mid-1]
-            
         else:
             left = -1 
         if mid+1 < len(matrix[0]):
