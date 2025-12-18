@@ -1,8 +1,13 @@
 """
 Docstring for Arrays.Find the Pair of Sum in a Rotated Sorted Array
+
+Time Complexity : O(logn) for finding the min element in the rotated Sorted Array + O(n) for finding the Pair of Sum 
+                  Total : O(logn) + O(n) -> O(n)
+Space Complexity : O(1)
+
 """
 def Binary_Search(L):
-    ans =float("inf")
+    ans = float("inf")
     index = -1
     low = 0 
     high = len(L)-1
@@ -12,30 +17,34 @@ def Binary_Search(L):
             if L[low] < ans:
                 ans = L[low]
                 index = low 
-            low = mid + 1
+            low = mid + 1 
         else:
             if L[mid] < ans:
                 ans = L[mid]
-                index = mid
-            high = mid - 1
+                index = mid 
+            high = mid -1 
     return index 
-L = eval(input("Enter the List : "))
-lowest = Binary_Search(L)
-print(lowest)
+            
+def Pair_of_sum(L,target,left,right):
+    iterations = 0
+    while(iterations != len(L)):
+        if left == len(L):
+            left = 0 
+        if right == -1:
+            right = len(L)-1
+        if L[left] + L[right] == target:
+            return True 
+        elif L[left] + L[right]  > target:
+            right -= 1
+        elif L[left] + L[right] < target:
+            left += 1
+        iterations += 1
+    return False 
+               
+L = eval(input("Enter the Element : "))
+target = int(input("Enter the Target Sum : "))
+left = Binary_Search(L)
+right = left - 1
+print(Pair_of_sum(L,target,left,right))
+
     
-target = int(input("Enter the Target : "))
-if L[lowest] + L[len(L)-1] >= target:
-    n = 0
-else:
-     n = (len(L)-1)-(lowest-1)
-highest = len(L)-1
-while(lowest<=highest):
-    if L[lowest] + L[highest-n] == target:
-        print("True")
-        break 
-    elif L[lowest] + L[highest-n] > target:
-        highest -= 1
-    else:
-        lowest += 1
-else:
-    print(False)
