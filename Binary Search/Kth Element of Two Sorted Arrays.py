@@ -7,8 +7,8 @@ Space Complexity : O(1)
 """
 def Binary_Search(L1,L2,k):
     if len(L1) > len(L2):
-        L1,L2 = L2,L2
-    low = max(0,k-len(L1))
+        L1,L2 = L2,L1
+    low = max(0,k-len(L2))
     high = min(k,len(L1))
     while(low <= high):
         mid1 = low + (high-low)//2
@@ -23,12 +23,12 @@ def Binary_Search(L1,L2,k):
             right1 = L1[mid1]
         if mid2 < len(L2):
             right2 = L2[mid2]
-        if left1 < right2 and left2 < right1:
+        if left1 <= right2 and left2 <= right1:
             return max(left1,left2)
         elif left1 > right2:
-            low = mid1 + 1
-        else:
             high = mid1 - 1
+        else:
+            low = mid1 + 1
             
 L1 = eval(input("Enter the First Sorted List : "))
 L2 = eval(input("Enter the Second Sorted List : "))
