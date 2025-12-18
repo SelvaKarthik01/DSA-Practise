@@ -1,8 +1,9 @@
 """
 Docstring for Binary Search.Median of Row wise Sorted Matrix
 
-Time Complexity : 
-Space Complexity : 
+Time Complexity : O(n) + O(n) for finding min and max seatrch space in the matrix 
+                  O(logN * N*logN) -> O(NlogNlogN)
+Space Complexity : O(1)
 
 """
 def LowValue(matrix):
