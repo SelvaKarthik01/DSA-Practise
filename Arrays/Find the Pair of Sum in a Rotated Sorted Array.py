@@ -27,7 +27,7 @@ def Binary_Search(L):
             
 def Pair_of_sum(L,target,left,right):
     iterations = 0
-    while(iterations != len(L)):
+    while(iterations != len(L)-1):
         if left == len(L):
             left = 0 
         if right == -1:
