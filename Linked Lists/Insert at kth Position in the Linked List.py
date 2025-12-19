@@ -44,7 +44,7 @@ def InsertAtk(head,val,k):
     else:
         curr= head 
         count = 1
-        while(count !=k-1 and curr.next != None):
+        while(count != k-1 and curr.next != None):
             curr = curr.next 
             count += 1
         newnode.next = curr.next 
