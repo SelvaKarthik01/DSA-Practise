@@ -2,8 +2,8 @@
 Docstring for Linked Lists.Reverse a Doubly Linked List
 
 Another Approach is to chnaage the val in the Node using LIFO Stack 
-TC -> O(n) + O(n)
-SC -> O(n)
+TC -> O(n) for storing the .val in Stack + O(n) for replacing the values 
+SC -> O(n) stack space 
 
 Time Complexity : O(n)
 Space Complexity : O(1)
