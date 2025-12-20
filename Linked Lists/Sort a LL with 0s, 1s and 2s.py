@@ -29,6 +29,7 @@ def display(head):
     while(curr):
         print("->",curr.val,end = "")
         curr = curr.next 
+        
 def Sort(head):
     dummy_zero= zero = Node(0)
     dummy_one = one = Node(1)
@@ -51,7 +52,7 @@ def Sort(head):
     two.next = None # Remember to Complete the Last Two Pointer as None other wise it would point towards the last non-updated one 
     return head  
         
-L = [1,0,1,2,0,2,1]
+L = [1,2,1,2,0,0]
 head = None
 for i in range(len(L)):
     head = Insert(head,L[i])
