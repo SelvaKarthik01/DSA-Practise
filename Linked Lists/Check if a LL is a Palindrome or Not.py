@@ -1,6 +1,26 @@
 """
 Docstring for Linked Lists.Check if a LL is a Palindrome or Not
 
+Another Solution with O(n) Space Complexity :
+
+def isPalindrome(head):
+    # write your code here
+    stack = []
+    curr = head 
+    while(curr):
+        stack.append(curr.data)
+        curr = curr.next 
+    curr= head 
+    while(curr):
+        if curr.data != stack.pop():
+            return False 
+        curr = curr.next
+    return True 
+    pass
+    
+TC -> O(n) + O(n)
+SC -> O(n)
+
 Time Complexity : O(n) for finding the Middle + O(n) for finding the Length + O(n//2) for Reversal + O(n//2) for Checking + O(n//2) for backtrack the changes done 
                   Total -> O(n) + O(n) + O(n//2) + O(n//2) + O(n//2) -> O(n)
                   
