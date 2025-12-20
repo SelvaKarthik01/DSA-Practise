@@ -51,17 +51,14 @@ def ReverseLL(head):
         return head 
     prev = None 
     curr = head 
-    future = head.next 
-    while(curr.next != None):
+    while(curr != None):
+        future = curr.next 
         curr.next = prev 
         prev = curr 
-        curr = future 
-        future = future.next 
-    curr.next = prev 
-    return curr 
+        curr = future
+    return prev 
     
-    
-        
+      
 L = [1,2,3,4,5,6,7,8,9,10]
 head = None
 for i in range(len(L)):

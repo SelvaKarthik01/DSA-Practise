@@ -18,17 +18,28 @@ def Insert(head,val):
             curr = curr.next 
         curr.next = newnode 
     return head  
+
 def display(head):
     print(head.val,end="") 
     curr= head.next
     while(curr):
         print("->",curr.val,end = "")
         curr = curr.next 
+
+def ReverseLL(head):
+    if head is None or head.next is None:
+        return head 
+    newhead = ReverseLL(head.next)
+    front = head.next 
+    front.next = head 
+    head.next = None 
+    return newhead 
         
         
 L = [1,2,3,4,5,6,7,8,9,10]
 head = None
 for i in range(len(L)):
     head = Insert(head,L[i])
+head = ReverseLL(head)
 display(head)
     
