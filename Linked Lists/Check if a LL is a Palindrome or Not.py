@@ -1,8 +1,10 @@
 """
 Docstring for Linked Lists.Check if a LL is a Palindrome or Not
 
-Time Complexity : 
-Space Complexity :
+Time Complexity : O(n) for finding the Middle + O(n) for finding the Length + O(n//2) for Reversal + O(n//2) for Checking + O(n//2) for backtrack the changes done 
+                  Total -> O(n) + O(n) + O(n//2) + O(n//2) + O(n//2) -> O(n)
+                  
+Space Complexity : O(1)
 
 """
 class Node:
@@ -30,38 +32,54 @@ def display(head):
         print("->",curr.val,end = "")
         curr = curr.next 
 
-def findMiddle(head):
-    slow=head 
-    fast = head 
-    while(fast.next is not None and fast.next.next is not None):
-        fast = fast.next.next 
-        slow = slow.next
-    return slow 
+
 
 def Reverse(head):
     prev = None 
     curr = head 
-    while(curr.next != None):
-        future = curr.next
+    while(curr):
+        future = curr.next 
         curr.next = prev 
-        prev =curr 
+        prev = curr 
         curr = future 
     return prev 
+         
+
+def findMiddle(head):
+    fast = head 
+    slow = head 
+    while(fast is not None and fast.next is not None):
+        fast = fast.next.next 
+        slow = slow.next 
+    return slow 
+
+def LengthofLL(head):
+    count = 0
+    curr = head 
+    while(curr):
+        curr = curr.next 
+        count += 1
+    return count
 
 def Palindrome_Check(head):
-    slow = findMiddle(head)
-    
-    second = Reverse(slow.next)
-    second_head = second
+    middle = findMiddle(head)
+    length = LengthofLL(head)
+    if length % 2 == 0:
+        second_head = middle 
+    else:
+        second_head = middle.next 
+    second = Reverse(second_head)
+    backtrack = second
     first = head 
     while(second != None):
         if first.val != second.val:
-            Reverse(second_head)
-            return False 
+            Reverse(backtrack)
+            return False
         first = first.next 
-        second = second.next
-    slow.next = Reverse(slow)
+        second = second.next 
+    Reverse(backtrack)   
     return True 
+    
         
 L = [1,2,3,2,1]
 head = None
