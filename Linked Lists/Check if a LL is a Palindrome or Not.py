@@ -32,8 +32,6 @@ def display(head):
         print("->",curr.val,end = "")
         curr = curr.next 
 
-
-
 def Reverse(head):
     prev = None 
     curr = head 
@@ -44,7 +42,6 @@ def Reverse(head):
         curr = future 
     return prev 
          
-
 def findMiddle(head):
     fast = head 
     slow = head 
