@@ -3,7 +3,8 @@ Docstring for Linked Lists.Find Pairs with given Sum in DLL
 
 Sorted DLL 
 
-Time Complexity : O(n)
+Time Complexity : O(n) for finding the last element + O(n) for finding the Pairs 
+                  Total -> O(n) + O(n) -> O(n)
 Space Complexity : O(1) -> Auxiliary Space : O(n) for stroing the Pairs
 
 """
