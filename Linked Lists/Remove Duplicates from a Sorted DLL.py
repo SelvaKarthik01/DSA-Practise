@@ -50,7 +50,6 @@ def DeleteDuplicates(head):
     while(curr and curr.next is not None):
         if curr.val == curr.next.val:
             dup = curr.next 
-            
             curr.next = dup.next 
             if dup.next:
                 dup.next.prev = curr
