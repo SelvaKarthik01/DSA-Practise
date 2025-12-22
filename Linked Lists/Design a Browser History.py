@@ -1,7 +1,8 @@
 """
 Docstring for Linked Lists.Design a Browser History
 
-Time Complexity : O(n)
+Time Complexity : O(1) for Visit + O(k) for forward + O(k) for back
+                  Total -> O(n)
 Space Complexity : O(1)
 
 """
