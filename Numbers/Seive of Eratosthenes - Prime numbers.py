@@ -1,7 +1,6 @@
 # Find out the Prime Numbers uptil n 
 #Seive basically removes all the fatcors of the prime numbers instead of checking it again and again to reduce the time complexity 
 #Seive of Erasthumus
-import math
 n = int(input("Enter the Number : "))
 import numpy as np
 L = np.zeros(n+1)
