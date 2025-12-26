@@ -12,10 +12,10 @@ n = int(input("Enter the Number N : "))
 sieve = [True]*(n+1)
 sieve[0]=sieve[1]=False
 for i in range(2,int(math.sqrt(n)+1)):
-    j = i 
-    while(i*j <= n):
-        sieve[i*j]=False 
-        j += 1
+    j = i*i 
+    while(j <= n):
+        sieve[j]=False 
+        j += i
 L = []
 for i in range(len(sieve)):
     if sieve[i]:
