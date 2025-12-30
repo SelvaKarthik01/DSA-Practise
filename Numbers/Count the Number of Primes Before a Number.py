@@ -3,7 +3,6 @@ Docstring for Numbers.Count the Number of Primes Before a Number
 
 Time Complexity : O(log(logn))
 Space Complexity : O(n)
-
 """
 import math 
 n = int(input("Enter the Number : "))
