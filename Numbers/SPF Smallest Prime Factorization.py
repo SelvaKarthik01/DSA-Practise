@@ -2,7 +2,7 @@
 Docstring for Numbers.SPF Smallest Prime Factorization
 
 Time Complexity : O(n) -> Creating the Sieve Array + O(nlog(logn)) -> Prime Harmonic Series + O(k) -> k Smallest Prime Numbers 
-                 => O(mlog(logn))
+                 => O(nlog(logn))
 Space Complexity : O(n) -> Sieve Array Space 
 """
 import math 
@@ -22,7 +22,7 @@ n = int(input("Enter the Number N : "))
 prime_factors = []
 sieve = soe(n)
 print(f"Smallest Prime Factors of {n} : ",end = " ")
-while(sieve[n] != 1):         # O(k)    
+while(sieve[n] != 1):  # O(k)  k -> smallest primes are present   
     prime_factors.append(sieve[n])
     n = n // sieve[n]
 prime_factors.append(n)
