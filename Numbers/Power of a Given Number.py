@@ -2,7 +2,7 @@
 Docstring for Numbers.Power of a Given Number
 
 Time Complexity : O(logn)
-Space Complexity : O(1)3
+Space Complexity : O(1)
 """
 
 a = eval(input("Enter the Base Number : "))
