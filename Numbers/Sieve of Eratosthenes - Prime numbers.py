@@ -11,13 +11,13 @@ Space Complexity : O(n) -> for the Sieve Array
 import math 
 
 def soe(n):
-    sieve = [1]*(n+1) # O(n)
+    sieve = [1]*(n+1) #O(n)
     sieve[0]=sieve[1] = 0 
     for i in range(2,int(math.sqrt(n)+1)): #O(nlog(logn))
         if sieve[i] == 0:
             continue 
         else:
-            mul = i  # Always start from i * i becuase 5x2 5x3 5x4 all would be marked 5x5 is where we need to actually start for every i
+            mul = i  # Always start from i * i because 5x2 5x3 5x4 all would be marked 5x5 is where we need to actually start for every i
             while(i*mul <= n):
                 sieve[i*mul] = 0 
                 mul += 1
