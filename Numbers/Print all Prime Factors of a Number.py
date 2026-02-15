@@ -1,8 +1,8 @@
 """
 Docstring for Numbers.Print all Prime Factors of a Number
 
-Time Complexity : 
-Space Complexity : 
+Time Complexity : O(sqrt(n))
+Space Complexity : O(n) Auxiliary Space 
 
 """
 import math 
