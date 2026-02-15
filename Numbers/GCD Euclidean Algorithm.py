@@ -1,5 +1,11 @@
 # To Find the HCF or GCD of a Number 
+"""
+Docstring for Numbers.GCD Euclidean Algorithm
 
+Time Complexity : O(logphi(min(a,b)))
+Space Complexity : O(1)
+
+"""
 a = int(input("Enter the value for a : "))
 b = int(input("Enter the value for b : "))
 def gcd(a,b):
